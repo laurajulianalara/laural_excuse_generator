@@ -12,6 +12,7 @@ let who = ['the dog' , 'my grandma' ];
 let action = ['ate' , 'broke' ];
 let what = ['my phone' , 'my car'];
 let when = ['this morning.' , 'while I was sleeping.'];
+let className = ["alert-warning", "alert-success"]
 
 // let randomIndex = Math.floor(Math.random() * 2);
 // let selectedWho = who[randomIndex]
@@ -37,12 +38,11 @@ let selectedWhat = selectExcuse (what);
 let selectedWhen = selectExcuse (when);
 
 
-console.log(selectedWho + " " + selectedAction + " " + selectedWhat + " " + selectedWhen);
-
 let htmlElement = document.querySelector(".excuse");
-htmlElement . innerHTML = selectedWho + " " + selectedAction + " " + selectedWhat + " " + selectedWhen;
+
+let selectedClass = selectExcuse(className);
+htmlElement.classList.add(selectedClass)
+htmlElement .innerHTML = selectedWho + " " + selectedAction + " " + selectedWhat + " " + selectedWhen;
  
-
-
 
 };
